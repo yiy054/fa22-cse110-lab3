@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pomodoro Timer First Brainstorm</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="author" content="Yi Yao">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset= "UTF-8">
+
+    <h1> Meeting Minutes </h1>
+    <p>Meeting minutes are notes recorded during a meeting so that anyone who missed the meeting can easily catch up, or if someone needs to reference back to a meeting that happened a little while ago they can jog their memory.</p>
+  </head>
+  <body>
+    <!-- Today's Meeting Guide -->
+    <section class="Today" id="today">
+        <div class="date">
+            <h4>Meeting Date: 10/7/2022 3PM</h4>
+        </div>
+        <div class="attendance-list">
+            <details>
+                <summary>Want to Join us?</summary>
+                <form action="/action_page.php" method="get">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email"><br><br>
+                    <input type="submit" value="Submit">
+                  </form>
+            </details>
+            <details>
+                <summary>Attendance list</summary>
+                <ol>    
+                    <li>Person1</li>
+                    <li>P2</li>
+                    <li>P3</li>
+                </ol>
+            </details>
+        </div>
+        <div class="Meeting-Guide">
+            <h4>Meeting Guide</h4>
+            <ul>    
+                <il>Area1</il>
+                <ul>
+                    <il>task 1</il>
+                    <il>task 2</il>
+                </ul>
+                <il>Area2</il>
+                <ul>
+                    <il>task 1</il>
+                    <il>task 2</il>
+                </ul>
+            </ul>
+        </div>
+    </section>
+
+    <section class="Future" id="future">
+
+    </section>
+    <!-- Privious Meeting recording -->
+    <section class="Past" id="past">
+        <div class="PrivousMeeting">
+            <!-- <h4>Last Meeting</h4> -->
+            <details>
+                <summary>Last Meeting</summary>
+            </details>
+        </div>
+    </section>
+
+    <section class="Comments" id="comments">
+        <div class="New-Topic">
+            <h2>New Bsiness!!!</h2>
+    
+        </div>
+        <div class="Comments">
+            <h2>Write Something!</h2>
+            <form action="/action_page.php" method="get">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <input type="submit" value="Submit">
+              </form>
+        </div>
+        <div class="Pictures">
+            <h2>Picture</h2>
+            <img src="path/to/image.jpg" alt="describes the image being shown for screen readers, or if the image can't be displayed"/>
+        </div>
+        <div class="Audio-Video">
+            <h2> Recording </h2>
+            <audio controls>
+                <source src="horse.ogg" type="audio/ogg">
+                <source src="horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+              </audio>
+            <video controls>
+                <source src="horse.ogg" type="audio/ogg">
+                <source src="horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </video>
+        </div>
+    </section>
+  </body>
+</html>
+
