@@ -11,15 +11,24 @@
     <h1> Meeting Minutes </h1>
     <p>Meeting minutes are notes recorded during a meeting so that anyone who missed the meeting can easily catch up, or if someone needs to reference back to a meeting that happened a little while ago they can jog their memory.</p>
   </head>
+
+
   <body>
+    <nav>
+        <ul class = "navigation">
+            <li><a href="#today" class = "nav-link">Today Meeting</a> </li>
+            <li><a href="#recording" class = "nav-link">Recording</a> </li>
+            <li><a href="#comments" class = "nav-link">Comments</a> </li>
+        </ul>
+    </nav>
     <!-- Today's Meeting Guide -->
-    <section class="Today" id="today">
+    <section class="today" id="today">
         <div class="date">
-            <h4>Meeting Date: 10/7/2022 3PM</h4>
+            <h4>Meeting Date: <i>10/7/2022 3PM</i> </h4>
         </div>
         <div class="attendance-list">
             <details>
-                <summary>Want to Join us?</summary>
+                <summary><em>Want to Join us?</em></summary>
                 <form action="/action_page.php" method="get">
                     <label for="fname">First name:</label>
                     <input type="text" id="fname" name="fname"><br><br>
@@ -27,79 +36,109 @@
                     <input type="text" id="lname" name="lname"><br><br>
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email"><br><br>
+
                     <input type="submit" value="Submit">
                   </form>
             </details>
             <details>
-                <summary>Attendance list</summary>
-                <ol>    
-                    <li>Person1</li>
+                <summary><b>Attendance list</b></summary>
+                <ul>
+                    <li>P1</li>
                     <li>P2</li>
-                    <li>P3</li>
-                </ol>
+                </ul>
             </details>
         </div>
+
+        <!-- Meeting Guide -->
         <div class="Meeting-Guide">
-            <h4>Meeting Guide</h4>
-            <ul>    
-                <il>Area1</il>
-                <ul>
-                    <il>task 1</il>
-                    <il>task 2</il>
-                </ul>
-                <il>Area2</il>
-                <ul>
-                    <il>task 1</il>
-                    <il>task 2</il>
-                </ul>
-            </ul>
+            <main>
+                <h2>Meeting-Guide(Main): </h2>
+                <p>Agenda of what the meeting will cover</p>
+                <dl>
+                    <dt>Area1</dt>
+                    <dd>taks1</dd>
+                    <dd>take2</dd>
+
+                    <dt>Area2</dt>
+                    <dd>task1</dd>
+                </dl>
+            </main>
+        </div>
+
+        <!-- Last Topic -->
+        <div class = "lasttopic">
+            <footer>
+                <strong>Last topic:</strong>
+                <p>Things that were unfinished business from last meeting</p>
+                <ol>    
+                    <li>Goal1</li>
+                    <li>Goal2</li>
+                    <li>Goal3</li>
+                </ol>
+            </footer>
+        </div>
+
+        <!-- New Business -->
+        <div class = "newbusiness">
+            <header>
+                <h3>Our Future!!! <span style="color: rgb(255, 0, 0);">Brainstorm</span> </h3>
+                <p>Things that are new business that need to be talked about</p>
+                <form action="/action_page.php" method="get">
+                    <label for="idea">Which one you most interesting?</label>
+                    <input list="ideas" name="idea" id="idea">
+                    <datalist id="ideas">
+                      <option value="idea1">
+                      <option value="idea2">
+                      <option value="idea3">
+                    </datalist>
+                    <input type="submit"><br>
+                </form>                  
+            </header>
         </div>
     </section>
 
-    <section class="Future" id="future">
-
-    </section>
-    <!-- Privious Meeting recording -->
-    <section class="Past" id="past">
-        <div class="PrivousMeeting">
-            <!-- <h4>Last Meeting</h4> -->
-            <details>
-                <summary>Last Meeting</summary>
-            </details>
+    <section class="recording" id="recording">
+        <div class="recorded">
+            <fieldset>
+                <legend>Recording: </legend>
+                <audio controls>
+                    <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+                <video controls>
+                    <source src="https://youtu.be/QiQiuNhNbtU">
+                    Your browser does not support the audio tag.
+                </video>
+                <br>
+                <a href = https://docs.google.com/document/d/1AyJJcrSNqsyXV_I80sf6H44YtGCRkIdJbn8ngAMkThs/edit?usp=sharing">Transcription Here!</a> 
+                <label for = "downloadtype">Download: </label>
+                <select id="downloadtype">
+                    <option value = "video">Video</option>
+                    <option value = "audio">Audio</option>
+                    <option value = "transcription">Transcription</option>
+                </select>
+                <button type="button"> Download </button>
+            </fieldset>
         </div>
     </section>
 
-    <section class="Comments" id="comments">
-        <div class="New-Topic">
-            <h2>New Bsiness!!!</h2>
-    
-        </div>
-        <div class="Comments">
+    <!-- Comment -->
+    <section class="comments" id="comments">
+        <div class="comments">
+            <hr>
             <h2>Write Something!</h2>
             <form action="/action_page.php" method="get">
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname"><br><br>
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname"><br><br>
+                <label for="comment">Comment:</label>
+                <br>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+                <br>
                 <input type="submit" value="Submit">
               </form>
+
         </div>
         <div class="Pictures">
-            <h2>Picture</h2>
-            <img src="path/to/image.jpg" alt="describes the image being shown for screen readers, or if the image can't be displayed"/>
-        </div>
-        <div class="Audio-Video">
-            <h2> Recording </h2>
-            <audio controls>
-                <source src="horse.ogg" type="audio/ogg">
-                <source src="horse.mp3" type="audio/mpeg">
-                Your browser does not support the audio tag.
-              </audio>
-            <video controls>
-                <source src="horse.ogg" type="audio/ogg">
-                <source src="horse.mp3" type="audio/mpeg">
-                Your browser does not support the audio tag.
-            </video>
+            <img src="/UCSD.png">
         </div>
     </section>
   </body>
