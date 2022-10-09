@@ -10,8 +10,10 @@
 
 
   <body>
-    <h1> Meeting Minutes </h1>
-    <p>Meeting minutes are notes recorded during a meeting so that anyone who missed the meeting can easily catch up, or if someone needs to reference back to a meeting that happened a little while ago they can jog their memory.</p>
+    <main id="top">
+        <h1> Meeting Minutes </h1>
+        <p>Meeting minutes are notes recorded during a meeting so that anyone who missed the meeting can easily catch up, or if someone needs to reference back to a meeting that happened a little while ago they can jog their memory.</p>
+    </main>
     <nav>
         <ul class = "navigation">
             <li><a href="#today" class = "nav-link">Today Meeting</a> </li>
@@ -49,18 +51,16 @@
 
         <!-- Meeting Guide -->
         <div class="Meeting-Guide">
-            <main>
-                <h2>Meeting-Guide(Main): </h2>
-                <p>Agenda of what the meeting will cover</p>
-                <dl>
-                    <dt>Area1</dt>
-                    <dd>taks1</dd>
-                    <dd>take2</dd>
+            <h2>Meeting-Guide(Main): </h2>
+            <p>Agenda of what the meeting will cover</p>
+            <dl>
+                <dt>Area1</dt>
+                <dd>taks1</dd>
+                <dd>take2</dd>
 
-                    <dt>Area2</dt>
-                    <dd>task1</dd>
-                </dl>
-            </main>
+                <dt>Area2</dt>
+                <dd>task1</dd>
+            </dl>
         </div>
 
         <!-- Last Topic -->
@@ -109,12 +109,10 @@
                     Your browser does not support the audio tag.
                 </video>
                 <br>
-                <a href = https://docs.google.com/document/d/1AyJJcrSNqsyXV_I80sf6H44YtGCRkIdJbn8ngAMkThs/edit?usp=sharing">Transcription Here!</a> 
                 <label for = "downloadtype">Download: </label>
                 <select id="downloadtype">
                     <option value = "video">Video</option>
                     <option value = "audio">Audio</option>
-                    <option value = "transcription">Transcription</option>
                 </select>
                 <button type="button"> Download </button>
             </fieldset>
@@ -136,6 +134,7 @@
 
         </div>
         <div class="Pictures">
+            <a href="#top">Back to Top</a>
             <img src="/UCSD.png">
         </div>
     </section>
