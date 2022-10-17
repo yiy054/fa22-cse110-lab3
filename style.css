@@ -1,0 +1,136 @@
+/* body {
+    background-color: lightblue;
+}
+  
+h1 {
+color: navy;
+margin-left: 20px;
+} */
+
+/* Initial Color for all type */
+:root {
+    /* --font-family: "Roboto", sans-serf; */
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    --primary-color: #4756df;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #a17a69;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+  }  
+@font-face {
+    font-family: "Fuzzy";
+    src: url(./Fuzzy_Bubbles/FuzzyBubbles-Regular.ttf);
+}
+@font-face {
+    font-family: "Comforter";
+    src: url(./Comforter_Brush/ComforterBrush-Regular.ttf);
+}
+@font-face {
+    font-family: "SilkScreen";
+    src: url(./Silkscreen/Silkscreen-Regular.ttf);
+
+}
+
+@media screen and (max-width: 420px) {
+    nav ul il{
+        font-weight: 100;
+    }
+} 
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* nav-Bar Setting  */
+nav {
+    position: sticky;
+    top: 0cm;
+    /* left: 0; */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    border-style: outset;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  nav h1 {
+    color: var(--primary-color);
+  }
+  /* Pseudo-class Selector */
+  nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1.9rem;
+  }
+
+  nav ul li {
+    font-family: "Fuzzy", sans-serif;
+    font-weight: var(--bold-font);
+  }
+
+
+h1 {
+    font-family: "SilkScreen", sans-serif;
+    padding-top: 0;
+    /* border: 5px solid rebeccapurple; */
+    display: block;
+}
+.attendance-list{
+    /* border: 5px solid rebeccapurple; */
+    display: inline;
+    padding: 0px 50px 0px 100px;
+}
+
+.recorded fieldset{
+    padding: 1.5rem 3.5rem;
+    border: 15px solid green;
+    max-width:fit-content;
+}
+.recorded video,img{
+    width: 50vmin;
+}
+/* --------------Overall setting -----------*/
+dl,ol,ul,p,h2,h3,h1{
+    border: 5px solid rebeccapurple;
+    /* margin-top: auto; */
+    /* padding-top: 0%; */
+}
+
+ol,dl{
+    /* display: inline; */
+    display: inline-block;
+    margin-top: -10%;
+    /* margin-bottom: 5%; */
+}
+p{
+    /* padding: 0px 50px 0px 100px; */
+    font-family: "Comforter", sans-serif;
+    margin: 25px 50px 75px;
+    /* display: inline; */
+    /* display: inline-block; */
+}
+h2{
+    font-family: "SilkScreen", sans-serif;
+    border-top: 1rem solid var(--primary-color);
+    border-style: outset;
+}
+
+

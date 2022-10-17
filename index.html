@@ -3,6 +3,7 @@
   <head>
     <title>Pomodoro Timer First Brainstorm</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
     <meta name="author" content="Yi Yao">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset= "UTF-8">
@@ -10,17 +11,22 @@
 
 
   <body>
-    <main id="top">
-        <h1> Meeting Minutes </h1>
-        <p>Meeting minutes are notes recorded during a meeting so that anyone who missed the meeting can easily catch up, or if someone needs to reference back to a meeting that happened a little while ago they can jog their memory.</p>
-    </main>
     <nav>
         <ul class = "navigation">
             <li><a href="#today" class = "nav-link">Today Meeting</a> </li>
             <li><a href="#recording" class = "nav-link">Recording</a> </li>
             <li><a href="#comments" class = "nav-link">Comments</a> </li>
         </ul>
+        <button class="burger-menu" id="burger-menu">
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
     </nav>
+
+    <main id="top">
+        <h1> Meeting Minutes </h1>
+        <p>Meeting minutes are notes recorded during a meeting so that anyone who missed the meeting can easily catch up, or if someone needs to reference back to a meeting that happened a little while ago they can jog their memory.</p>
+    </main>
+
     <!-- Today's Meeting Guide -->
     <section class="today" id="today">
         <div class="date">
@@ -133,11 +139,10 @@
                 <br>
                 <input type="submit" value="Submit">
               </form>
-
+              <br>
+            <a href="#top">Back to Top</a>
         </div>
         <div class="Pictures">
-            <a href="#top">Back to Top</a>
-            <br><br>
             <img src="./UCSD.jpg" alt = "UCSD">
         </div>
     </section>
