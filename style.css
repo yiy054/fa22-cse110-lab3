@@ -65,7 +65,7 @@ ol,dl{
     /* display: inline; */
     /* text-decoration: underline overline; */
     display: inline-block;
-    margin-top: -2%;
+    margin-top: -2px;
     /* margin-bottom: 5%; */
 }
 p{
@@ -87,6 +87,7 @@ h2{
 
 /* nav-Bar Setting  */
 nav {
+    
     position: sticky;
     top: 0cm;
     /* left: 0; */
@@ -125,6 +126,7 @@ nav {
     border-width: 4mm;
     border-radius: 10px;
 }
+
 .attendance-list details{
     margin-left: 20px;
 }
