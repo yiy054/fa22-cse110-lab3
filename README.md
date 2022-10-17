@@ -1,2 +1,2 @@
 # Lab 2 - Starter
-https://yiy054.github.io/Lab2_Starter/
+https://yiy054.github.io/fa22-cse110-lab3/
