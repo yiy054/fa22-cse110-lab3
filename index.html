@@ -17,9 +17,7 @@
             <li><a href="#recording" class = "nav-link">Recording</a> </li>
             <li><a href="#comments" class = "nav-link">Comments</a> </li>
         </ul>
-        <button class="burger-menu" id="burger-menu">
-            <ion-icon class="bars" name="menu-outline"></ion-icon>
-        </button>
+        
     </nav>
 
     <main id="top">
@@ -29,36 +27,45 @@
 
     <!-- Today's Meeting Guide -->
     <section class="today" id="today">
-        <div class="date">
-            <h4>Meeting Date: <i>10/7/2022 3PM</i> </h4>
-        </div>
         <div class="attendance-list">
-            <details>
-                <summary><em>Want to Join us?</em></summary>
-                <form action="./action_page.php" method="get">
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname"><br><br>
-                    <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname"><br><br>
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email"><br><br>
-
-                    <input type="submit" value="Submit">
-                  </form>
-            </details>
-            <details>
-                <summary><b>Attendance list</b></summary>
-                <ul>
-                    <li>P1</li>
-                    <li>P2</li>
-                </ul>
-            </details>
+            <div class="date">
+                <h4>Meeting Date: <i>10/7/2022 3PM</i> </h4>
+            </div>
+            <div class="Join-us">
+                <details>
+                    <summary><em>Want to Join us?</em></summary>
+                    <form action="./action_page.php" method="get">
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname"><br>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email"><br>
+    
+                        <input type="submit" value="Submit">
+                      </form>
+                </details>
+            </div>
+            <div class="list">
+                <details>
+                    <summary><b>Attendance list</b></summary>
+                    <ul>
+                        <li>P1</li>
+                        <li>P2</li>
+                    </ul>
+                </details>
+            </div>
         </div>
+    </section>
 
+
+    <section class="Guide" id="Guide">
         <!-- Meeting Guide -->
         <div class="Meeting-Guide">
             <h2>Meeting-Guide(Main): </h2>
             <p>Agenda of what the meeting will cover</p>
+            <span> Not idea <span> but just do it</span></span>
+            <p>Keep Working~~~~</p>
             <dl>
                 <dt>Area1</dt>
                 <dd>taks1</dd>
@@ -129,10 +136,9 @@
     </section>
 
     <!-- Comment -->
+    <h2>Write Something!</h2>
+    <br>
     <section class="comments" id="comments">
-        <div class = "commenttitle">
-            <h2>Write Something!</h2>
-        </div>
         <div class="comment">
             <!-- <h2>Write Something!</h2> -->
             <form action="./action_page.php" method="get">

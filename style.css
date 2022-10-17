@@ -13,8 +13,11 @@ margin-left: 20px;
     --normal-font: 400;
     --bold-font: 700;
     --bolder-font: 900;
+    /* Color HSL */
     --bg-color: hsl(199, 69%, 77%);
+    /* Color name */
     --primary-color: blue;
+    /* Color # */
     --secondary-color: #ff7235;
     --primary-shadow: #8b8eaf;
     --secondary-shadow: #a17a69;
@@ -46,6 +49,7 @@ margin-left: 20px;
 html {
     box-sizing: border-box;
 }
+/* Universal Selector */
 *,
 *::before,
 *::after {
@@ -53,54 +57,77 @@ html {
 }
 
 /* --------------Overall setting -----------*/
-dl,ol,ul,p,h2,h3,h1,.attendance-list {
+dl,ol,ul,p,h2,h3,h1,.attendance-list ,strong {
+    /*  border short */
     border: 5px solid rebeccapurple;
     /* margin-top: auto; */
     /* padding-top: 0%; */
 }
 dt{
+    /* text-decoration */
     text-decoration: underline overline;
 }
 ol,dl{
-    /* display: inline; */
+    /* display inline-block */
     /* text-decoration: underline overline; */
     display: inline-block;
-    margin-top: -2px;
+    /* Absolute unit pt */
+    /*  margin long */
+    margin-top: -2pt;
     /* margin-bottom: 5%; */
 }
 p{
+    /* fonts */
     font-family: "Comforter", sans-serif;
+    /* Absolute unit px */
+    /*  margin short */
     margin: 5px 10px 5px 0px;
 }
 h1 {
+    /* fonts */
     font-family: "SilkScreen", sans-serif;
+    /* Padding long */
     padding-top: 0;
+    /*  display block */
     display: block;
+    /* text-align */
     text-align: center;
 }
 
 h2{
+    /* fonts */
     font-family: "SilkScreen", sans-serif;
     border-top: 1rem solid var(--primary-color);
     /* border-style: outset; */
 }
+summary{
+    /* height */
+    height: min-content;
+    /* weidth */
+    width: fix-content;
 
-/* nav-Bar Setting  */
+}
+/* -------------- nav-Bar Setting --------------  */
 nav {
-    
+    /* Position sticky */
     position: sticky;
-    top: 0cm;
+    top: 0;
     /* left: 0; */
     z-index: 1;
+    /*  flex */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* Relative Unit rem */
+    /* Padding short */
     padding: 1.5rem 3.5rem;
+    /* BackGround */
     background-color: var(--bg-color);
     border-style: outset;
+    /* Color RGB */
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
-
+  /* Combining Two Selectors */
   nav h1 {
     color: var(--primary-color);
   }
@@ -109,7 +136,10 @@ nav {
     color: var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
   }
-
+  /* Attribute Selector  */
+  nav a[href*="#"]{
+    text-decoration: underline overline;
+  }
   nav ul {
     display: flex;
     gap: 1.9rem;
@@ -119,57 +149,103 @@ nav {
     font-family: "Fuzzy", sans-serif;
     font-weight: var(--bold-font);
   }
-
-.attendance-list{
+/* -------------- Today Part style -------------- */
+.attendance-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1 px;
+    grid-auto-rows: minmax(100px, auto);
+}
+/* ID Selector */
+#date{
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+.Join-us{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.list{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+/* .date,.Join-us,.list{
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 30%;
+} */
+.Join-us,.list{
+    /* border */
     border-style: ridge;
     border-color: #8b8eaf;
+    /* Absolute unit mm */
     border-width: 4mm;
     border-radius: 10px;
-}
-
-.attendance-list details{
+    /* Marigin Long */
     margin-left: 20px;
 }
+/*  -------------- Guide -------------- */
+/*  General sibling combinator */
+p ~ span {
+    color: red;
+}
+/* Child Combinator  */
+div > p {
+    background-color: yellow;
+}
+/*  Adjacent sibling combinator*/
+li:first-of-type + li {
+    font-weight: bold;
+}
 
-
+/*  -------------- Recording Part -------------- */
 .recorded fieldset{
+    /* Padding short */
     padding: 1.5rem 3.5rem;
     border: 15px solid green;
-    max-width:fit-content;
+    /* Relative unit vmax */
+    /*  max-width */
+    max-width:5 vmax;
 }
 .recorded video,img{
-    width: 50vmin;
+    /* Relative unit vim */
+    width: 100vmin;
+    /* min-width */
+    min-width: 50vmin;
 }
 
 .downloadbutton:active{
     box-shadow: 2px 2px 5px var(--secondary-shadow);
 }
+
+/* -------------- Comments -------------- */
+
 .comments {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-  }
-.commenttitle{
-    grid-column: 1 / 4;
-    grid-row: 1;
-}
-.comment {
-    grid-column: 1;
-    grid-row: 2 / 5;
-}
-.Pictures{
-    grid-column: 3 / 4;
-    grid-row: 2 / 5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    font-size: 30px;
+    text-align: center;
+    /* Relative length units lh */
+    padding: 10lh;
+    border-style: ridge;
 }
 
+.comment, .Pictures{
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+    flex-grow: 1;
+}
+/* -------------- Back UP -------------- */
 .scroll-up {
+    /* position fixed */
     position: fixed;
     right: 0.5%;
     bottom: 3%;
     cursor: pointer;
 }
-
 .backtotop:active {
     box-shadow: 2px 2px 5px bisque;
 }
