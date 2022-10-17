@@ -59,7 +59,7 @@ html {
 /* --------------Overall setting -----------*/
 dl,ol,ul,p,h2,h3,h1,.attendance-list ,strong {
     /*  border short */
-    border: 5px solid rebeccapurple;
+    /* border: 5px solid rebeccapurple; */
     /* margin-top: auto; */
     /* padding-top: 0%; */
 }
