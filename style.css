@@ -39,7 +39,7 @@ margin-left: 20px;
     src: url(./Silkscreen/Silkscreen-Regular.ttf);
 
 }
-
+/* Responsiveness */
 @media screen and (max-width: 420px) {
     nav ul il{
         font-weight: 100;
@@ -67,6 +67,7 @@ dt{
     /* text-decoration */
     text-decoration: underline overline;
 }
+/* Selector List */
 ol,dl{
     /* display inline-block */
     /* text-decoration: underline overline; */
@@ -108,6 +109,7 @@ summary{
 
 }
 /* -------------- nav-Bar Setting --------------  */
+/* Element Selector */
 nav {
     /* Position sticky */
     position: sticky;
@@ -127,7 +129,7 @@ nav {
     /* Color RGB */
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
-  /* Combining Two Selectors */
+  /* Descendant Combinator  */
   nav h1 {
     color: var(--primary-color);
   }
@@ -140,7 +142,8 @@ nav {
   nav a[href*="#"]{
     text-decoration: underline overline;
   }
-  nav ul {
+  /* Combining Two Selectors */
+  ul.navigation {
     display: flex;
     gap: 1.9rem;
   }
@@ -150,10 +153,15 @@ nav {
     font-weight: var(--bold-font);
   }
 /* -------------- Today Part style -------------- */
+/* grid */
 .attendance-list {
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 1 px;
+    /* gap: 1 px; */
+    /* column-gap: 1px;
+    row-gap: 1px; */
+    grid-auto-columns: 50px;
+    grid-auto-flow: column;
     grid-auto-rows: minmax(100px, auto);
 }
 /* ID Selector */
@@ -161,6 +169,7 @@ nav {
     grid-column: 1 / 4;
     grid-row: 1;
 }
+/* Class Selector */
 .Join-us{
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -186,6 +195,7 @@ nav {
 }
 /*  -------------- Guide -------------- */
 /*  General sibling combinator */
+
 p ~ span {
     color: red;
 }
@@ -219,7 +229,7 @@ li:first-of-type + li {
 }
 
 /* -------------- Comments -------------- */
-
+/*  Flexbox */
 .comments {
     display: flex;
     flex-direction: row;
